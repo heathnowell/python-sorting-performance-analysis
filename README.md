@@ -39,14 +39,24 @@ These measurements include file I/O and were collected on one computer, so they 
 
 ```text
 python-sorting-performance-analysis/
-├── pandas_sort.py
-├── builtin_sort.py
-├── natsort_sort.py
+├── .gitignore
 ├── Highest_Grossing_Movies.csv
 ├── README.md
+├── builtin_sort.py
+├── natsort_sort.py
+├── pandas_sort.py
 ├── requirements.txt
-└── .gitignore
+└── docs/
+    └── research-paper.pdf
 ```
+
+## Research Paper
+
+The full write-up from the original science fair project is available here:
+
+[View the research paper](docs/research-paper.pdf)
+
+It includes the project background, hypothesis, procedure, experimental results, discussion, conclusion, and bibliography.
 
 ## Requirements
 
@@ -76,7 +86,7 @@ Creates:
 sorted_pandas.csv
 ```
 
-### Built-in Python libraries
+### Built-in Python Libraries
 
 ```bash
 python builtin_sort.py
@@ -101,6 +111,20 @@ sorted_natsort.csv
 ```
 
 Each script prints the total runtime after it finishes.
+
+## How the Three Approaches Differ
+
+### pandas
+
+Uses a pandas `DataFrame` and `sort_values()` to sort the dataset.
+
+### Built-in Python
+
+Uses Python's built-in `csv` module, converts the gross-income values to numbers, and sorts the rows with `list.sort()`.
+
+### natsort
+
+Uses the third-party `natsort` library and `natsorted()` to sort the dataset.
 
 ## What I Learned
 
